@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -7,14 +10,17 @@
       ],
       "~/*": [
         "./*"
+      ],
+      "~/server/*": [
+        "server/*"
       ]
     },
-    "types": [
-      "vite/client"
-    ]
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": [
     "src",
+    "server",
     "types"
   ],
   "references": [

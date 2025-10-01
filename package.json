@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"bun run dev:backend\" \"bun run dev:frontend\"",
     "dev:frontend": "bun run vite",
-    "dev:backend": "bun run server/app.ts",
+    "dev:backend": "bun --watch server/server.ts",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
@@ -35,6 +35,8 @@
     "morgan": "^1.10.1",
     "nodemon": "^3.1.10",
     "tailwindcss": "^4.1.14",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "~5.8.3",
     "vite": "^7.1.7",
     "vue-tsc": "^3.0.7"
